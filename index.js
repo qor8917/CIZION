@@ -25,8 +25,9 @@ let comments = [
 ];
 
 /** ***************이벤트 발생*************** **/
-//초기 로딩
-init();
+//최초 로딩
+saveComment();
+loadComments();
 
 //댓글 입력시 로그인 유무 모달 띄우기
 document.querySelector('.make_reply').addEventListener('focus', modalShow);
@@ -60,11 +61,6 @@ function toggleMore(el) {
 }
 
 /** ***************사용자 함수*************** **/
-
-//재로딩
-function init() {
-  loadComments();
-}
 
 //로컬 스토리지에 데이터 저장
 function saveComment() {
