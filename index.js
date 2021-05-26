@@ -15,7 +15,7 @@ let comments = [
   {
     comment_idx: 2,
     reg_id: 'new1',
-    reg_date: 1622041352112,
+    reg_date: 1622049075447,
     comment_contents: '저는 그렇게 생각 안합니다.',
     like: 0,
     dislike: 0,
@@ -156,8 +156,13 @@ function addComment() {
     .querySelector('.make_reply')
     .value.replace(/(\s*)/g, '');
   //금지어 지정
+
   if (text.includes('면접탈락')) {
     alert('면접탈락은 사용 할수 없는 금지어 입니다');
+    return;
+  }
+  if (!text) {
+    alert('빈공백은 댓글을 다실 수 없습니다');
     return;
   }
   //데이터 삽입
@@ -277,3 +282,5 @@ function time(reg_date) {
   let min = Math.floor(difference / 1000 / 60 / 60);
   return min;
 }
+
+console.log(new Date().getTime());
