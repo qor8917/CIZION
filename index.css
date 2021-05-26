@@ -1,0 +1,68 @@
+body {display: flex;justify-content: center;align-items: center;width: 100%;height: 100vh;background: rgba(171, 28, 28, 0.195);}
+.wrapper{width: 400px;height: 700px;background: #fff;overflow: hidden;position: relative;}
+.main{height: 300px;background: rgba(0, 0, 0, 0.763);padding: 1em;display: flex;flex-direction: column;color: #fff;}
+.main .top_nav{display: flex;justify-content: space-between;font-size: 1.5em;align-items: center;margin-bottom: 1em;
+}
+.user_info_wrapper{display: flex;justify-content: space-between;align-items: center;}
+.user_info_wrapper .user_info{display: flex;justify-content: center;align-items: center;}
+.user_info_wrapper .user_info>* {margin-right: 0.5em;}
+.user_info_wrapper .user_info .avatar{width: 2em;overflow: hidden;}
+.user_info_wrapper .user_info .avatar img{width: 100%;}
+.user_info_wrapper .user_info .sns_icon{width: 1em;overflow: hidden;}
+.user_info_wrapper .user_info .sns_icon img {width: 100%;}
+.content{line-height: 1.6;font-size: 1.125em;flex: 1;margin: 1em 0;}
+.reply_and_like{display: flex;justify-content: space-between;align-items: center;padding: 0.25em 0;}
+.reply_and_like i {margin-right: 0.25em;}
+.reply_and_like .like-wrap{display: flex;justify-content: space-between;align-items: center;margin-bottom: 0.5em;}
+.reply_and_like .like-wrap .like{margin-right: 1em;}
+
+
+
+
+.reply_wrapper {background: #fff;height: 400px;  padding: 1em;font-size: 0.75em;display: flex;flex-direction:column;}
+.reply_wrapper .user_info_wrapper .user_info>i {transform: rotate(90deg)}
+.reply_wrapper>div{color: #000;}
+.reply_wrapper .reply_wrap{flex: 1;overflow-y: auto;}
+.reply_wrapper .reply_wrap .single_reply{border-bottom: 1px solid #ccc;margin-bottom: 0.5em;}
+.reply_wrapper .reply_wrap .single_reply .more{position: relative;cursor: pointer; font-size: 1.5em;}
+.reply_wrapper .reply_wrap .single_reply .more-wrap{position: absolute;right: 0;top: 12px;background: #fff;
+text-align: center;width: 200px; display: none;}
+.reply_wrapper .reply_wrap .single_reply .more-wrap.show{display: block;}
+.reply_wrapper .reply_wrap .single_reply .more-wrap .more_btn_edit{border: 1px solid #ccc;padding: 0.5em;}
+.reply_wrapper .reply_wrap .single_reply .more-wrap .more_btn_remove{padding: 0.5em;border: 1px solid #ccc;}
+
+.reply_wrapper .put_reply h3{font-weight: bold;font-size: 2em;padding: 0.5em;}
+.reply_wrapper .put_reply .input_wrap{display: flex;align-items: center;justify-content: center; }
+.reply_wrapper .put_reply .input_wrap input{flex: 6;padding: 1em;border: 1px solid #ccc;box-sizing: border-box;}
+.reply_wrapper .put_reply .input_wrap button{flex: 1;padding: 1em;background: red;color: #fff;border: 1px solid transparent;}
+
+
+
+.modal_login_wrapper{background: rgba(0, 0, 0, 0.516);position: absolute;left: 0;top: 0;width: 100%;height: 100%;transition: 1s;display: none;}
+.modal_login{height: 450px;display: flex;flex-direction: column;position: absolute;left: 0;bottom:-100%;border-radius: 1em 1em 0 0;width: 100%;background: #fff;text-align: center;padding: 1em;transition: .6s;}
+.modal_login_wrapper.display{display: block;}
+.modal_login.show{bottom: 0;}
+
+.modal_login h2{font-size: 2em;padding-top: 1em;}
+.modal_login h2 span{color: red;}
+.modal_login .sns_wrapper{flex: 1;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.modal_login .sns_wrapper>div{width: 80%;font-size: 1.5em;font-weight: bold;border-radius: 1.5em;display: flex;padding: 1em;margin: 0.5em 0;}
+.modal_login .sns_wrapper>div>button{border: none;background:none;color: #fff;flex: 1;}
+.modal_login .sns_wrapper>div>.icon{color: #fff;}
+.modal_login .sns_wrapper .google {background: red;}
+.modal_login .sns_wrapper .facebook {background: blue;}
+
+.modal_edit_wrapper{display: none;}
+.modal_edit_wrapper.show{display: block;}
+.modal_edit_wrap{
+  border: 1px solid #ccc;
+  position: absolute;width: 100%;left: 0;bottom: 0;height: 200px;
+  background: #fff;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;  
+}
+.modal_edit_wrapper .edit_title{font-size: 1.125em;padding: 0.25em;}
+.modal_edit_wrapper .edit_contents{flex: 1;resize: none;}
+.modal_edit_wrapper .btn_edit{margin: 0.25em 0; background: red;color: #fff;padding: 0.25em 0;}
